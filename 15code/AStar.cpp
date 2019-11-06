@@ -17,7 +17,7 @@ AStar::AStar(int ss0[4][4])
 	step=-1;
 }
 
-void AStar::AA()
+void AStar::Amain()
 {
 	step++;
 	if(open.size()!=0)
@@ -33,7 +33,7 @@ void AStar::AA()
 		}else
 		{
 			genChild();
-			AA();
+			Amain();
 		}
 	}else
 	{
@@ -80,6 +80,7 @@ void AStar::genChild()
 		}
 	}
 	reverse(open.begin(), open.end());
+	//open表逆置之后在排序，确保在open表最前端的是当前状态下得到的新的F(n)最小的状态
 	sortOpen();
 }
 

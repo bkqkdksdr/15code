@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 class AStar
-{
+{//dede
 private:
 	int step;
 	int G[4][4];
@@ -17,7 +17,7 @@ private:
 	vector<S> closed;
 public:
 	AStar(int s0[4][4]);
-	void AA();
+	void Amain();
 	void genChild();
 	void sortOpen();
 	bool ifInOpen(S temp);
